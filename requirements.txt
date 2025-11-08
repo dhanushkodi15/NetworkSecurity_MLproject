@@ -4,3 +4,7 @@ numpy
 matplotlib
 seaborn
 flask
+pymango
+certifi
+
+# -e .
