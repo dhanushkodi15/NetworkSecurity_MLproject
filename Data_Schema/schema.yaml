@@ -1,0 +1,98 @@
+columns:
+  - CLASS_LABEL: int
+  - URL: str
+  - URL_LENGTH: int
+  - NUM_SPECIAL_CHARACTERS: int 
+  - HAS_IP_ADDRESS: int
+  - NUM_SUBDOMAINS: int
+  - HAS_SSL_CERTIFICATE: int
+  - DOMAIN_AGE: int
+  - WHOIS_EXPIRATION: int
+  - NUM_REDIRECTIONS: int
+  - HAS_SHORTENING_SERVICE: int
+  - NUM_SUSPICIOUS_WORDS: int
+  - HTML_LENGTH: int
+  - NUM_IFRAMES: int
+  - NUM_EXTERNAL_LINKS: int
+  - HAS_POPUP_WINDOW: int
+  - HAS_ONMOUSEOVER: int
+  - HAS_RIGHT_CLICK: int
+  - LINKS_IN_SCRIPT_TAG: int
+  - SERVER_FORM_HANDLER: int
+  - SUBMIT_TO_EMAIL: int
+  - ABNORMAL_URL: int
+  - WEBSITE_TRAFFIC: int
+  - DOMAIN_POPULARITY: int
+  - GOOGLE_INDEX: int
+  - PAGE_RANK: int
+  - STATISTICAL_REPORT: int
+  - FINAL_CLASS_LABEL: int
+  - ID : int
+  - ExtFavicon: int
+  - InsecureForms: int
+  - RelativeFormAction: int
+  - ExtFormAction: int
+  - AbnormalFormAction: int
+  - PctNullSelfRedirectHyperlinks: float
+  - FrequentDomainNameMismatch: int
+  - FakeLinkInStatusBar: int
+  - RightClickDisabled: int
+  - PopUpWindow: int
+  - SubmitInfoToEmail: int
+  - IframeOrFrame: int
+  - MissingTitle: int
+  - ImagesOnlyInForm: int
+  - SubdomainLevelRT: int
+  - UrlLengthRT: int
+  - PctExtResourceUrlsRT: float
+  - AbnormalExtFormActionR: int
+  - ExtMetaScriptLinkRT: int
+  - PctExtNullSelfRedirectHyperlinksRT: float
+  - SpellingErrorsRT: int
+
+categorical_columns: 
+  - CLASS_LABEL
+  - HAS_IP_ADDRESS
+  - HAS_SSL_CERTIFICATE
+  - HAS_SHORTENING_SERVICE
+  - HAS_POPUP_WINDOW
+  - HAS_ONMOUSEOVER
+  - HAS_RIGHT_CLICK
+  - SERVER_FORM_HANDLER
+  - SUBMIT_TO_EMAIL
+  - ABNORMAL_URL
+  - GOOGLE_INDEX
+  - STATISTICAL_REPORT
+
+numerical_columns:
+  - URL_LENGTH
+  - NUM_SPECIAL_CHARACTERS
+  - NUM_SUBDOMAINS
+  - DOMAIN_AGE
+  - WHOIS_EXPIRATION
+  - NUM_REDIRECTIONS
+  - NUM_SUSPICIOUS_WORDS
+  - HTML_LENGTH
+  - NUM_IFRAMES
+  - NUM_EXTERNAL_LINKS
+  - LINKS_IN_SCRIPT_TAG
+  - WEBSITE_TRAFFIC
+  - DOMAIN_POPULARITY
+  - PAGE_RANK
+  - PctNullSelfRedirectHyperlinks
+  - FrequentDomainNameMismatch
+  - FakeLinkInStatusBar
+  - RightClickDisabled
+  - PopUpWindow
+  - SubmitInfoToEmail
+  - IframeOrFrame
+  - MissingTitle
+  - ImagesOnlyInForm
+  - SubdomainLevelRT
+  - UrlLengthRT
+  - PctExtResourceUrlsRT
+  - AbnormalExtFormActionR
+  - ExtMetaScriptLinkRT
+  - PctExtNullSelfRedirectHyperlinksRT
+  - SpellingErrorsRT
+

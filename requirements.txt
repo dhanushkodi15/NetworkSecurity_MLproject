@@ -8,5 +8,6 @@ pymango
 certifi
 scikit-learn
 pymongo[srv]==3.12
+pyyaml
 
 # -e .

@@ -1,0 +1,8 @@
+from dataclasses import dataclass
+
+@dataclass
+def DataIngestionAritifact():
+    
+@dataclass
+def DataValidationArtifact():
+    t

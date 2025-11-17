@@ -28,5 +28,26 @@ class TrainingPipelineConfig:
         self.target_column = TrainingPipeline.TARGET_COLUMN
         self.file_name = TrainingPipeline.FILE_NAME
 
+class DataValidationConfig:
+    def __init__(self):
+        self.data_validation_dir = os.path.join(TrainingPipeline.ARTIFACT_DIR,
+                                                TrainingPipeline.DATA_VALIDATION_DIR_NAME,
+                                                f"{datetime.now().strftime('%d_%m_%Y__%H_%M_%S')}")
+        self.valid_data_dir =  os.path.join(self.data_validation_dir,
+                                            TrainingPipeline.DATA_VALIDATION_VALID_DIR)
+        self.invalid_data_dir = os.path.join(self.data_validation_dir,
+                                             TrainingPipeline.DATA_VALIDATION_INVALID_DIR)
+        self.valid_train_file_path = os.path.join(self.valid_data_dir,
+                                              TrainingPipeline.TRAIN_FILE_NAME)
+        self.valid_test_file_path = os.path.join(self.valid_data_dir,
+                                             TrainingPipeline.TEST_FILE_NAME)
+        self.invalid_train_file_path = os.path.join(self.invalid_data_dir,
+                                              TrainingPipeline.TRAIN_FILE_NAME)
+        self.invalid_test_file_path = os.path.join(self.invalid_data_dir,
+                                             TrainingPipeline.TEST_FILE_NAME)
+        self.drift_report_dir = os.path.join(self.data_validation_dir,
+                                             TrainingPipeline.DATA_VALIDATION_DRIFT_REPORT_DIR)
+        self.drift_report_file_path = os.path.join(self.drift_report_dir,
+                                                  TrainingPipeline.DATA_VALIDATION_DRIFT_REPORT_FILE_NAME)
         
 
