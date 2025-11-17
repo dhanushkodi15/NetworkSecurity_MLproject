@@ -1,4 +1,5 @@
 from NetworkSecurity.Entity.entity_config import DataIngestionConfig, DataValidationConfig  
+from NetworkSecurity.Entity.artifacts_config import DataValidationArtifact
 from NetworkSecurity.Constant import TrainingPipeline
 from NetworkSecurity.Exception.exception import NetworkSecurityException
 from NetworkSecurity.Logging.logger import logging
@@ -92,6 +93,7 @@ class DataValidation:
             drift_report_file_path = self.data_validation_config.drift_report_file_path
             os.makedirs(os.path.dirname(drift_report_file_path), exist_ok=True)
             write_yaml_file(drift_report_file_path, report)
+
             return status
            
 
@@ -118,11 +120,24 @@ class DataValidation:
             train_df.to_csv(self.data_validation_config.valid_train_file_path, index=False, header=True)
             test_df.to_csv(self.data_validation_config.valid_test_file_path, index=False, header=True)
             logging.info("Valid train and test files are saved.")
+
+            self.data_validation_artifact = DataValidationArtifact(
+                data_validation_dir=self.data_validation_config.data_validation_dir,
+                valid_data_dir=self.data_validation_config.valid_data_dir,
+                invalid_data_dir=self.data_validation_config.invalid_data_dir,
+                valid_train_file_path=self.data_validation_config.valid_train_file_path,
+                valid_test_file_path=self.data_validation_config.valid_test_file_path,
+                invalid_train_file_path=self.data_validation_config.invalid_train_file_path,
+                invalid_test_file_path=self.data_validation_config.invalid_test_file_path,
+                drift_report_dir=self.data_validation_config.drift_report_dir,
+                drift_report_file_path=self.data_validation_config.drift_report_file_path
+            )
             return{
                 "column_statues": column_statues,
                 "numerical_columns_status": numerical_columns_status,
                 "drift_status": drift_status
             }
+        
         except Exception as e:
             raise NetworkSecurityException(e, sys)
             

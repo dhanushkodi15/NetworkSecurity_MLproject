@@ -1,0 +1,200 @@
+AbnormalExtFormActionR:
+  drift_status: No Drift
+  ks_statistic: 0.007952380952380952
+  p_value: 0.9992544528650021
+AbnormalFormAction:
+  drift_status: No Drift
+  ks_statistic: 0.0005714285714285715
+  p_value: 1.0
+AtSymbol:
+  drift_status: No Drift
+  ks_statistic: 0.00042857142857142855
+  p_value: 1.0
+CLASS_LABEL:
+  drift_status: No Drift
+  ks_statistic: 0.0033333333333333335
+  p_value: 1.0
+DomainInPaths:
+  drift_status: No Drift
+  ks_statistic: 0.010809523809523809
+  p_value: 0.9647497679853072
+DomainInSubdomains:
+  drift_status: No Drift
+  ks_statistic: 0.001238095238095238
+  p_value: 1.0
+DoubleSlashInPath:
+  drift_status: No Drift
+  ks_statistic: 0.000619047619047619
+  p_value: 1.0
+EmbeddedBrandName:
+  drift_status: No Drift
+  ks_statistic: 0.0003333333333333333
+  p_value: 1.0
+ExtFavicon:
+  drift_status: No Drift
+  ks_statistic: 0.0017142857142857142
+  p_value: 1.0
+ExtFormAction:
+  drift_status: No Drift
+  ks_statistic: 0.010761904761904762
+  p_value: 0.9661085431968633
+ExtMetaScriptLinkRT:
+  drift_status: No Drift
+  ks_statistic: 0.013857142857142858
+  p_value: 0.8097315397647039
+FakeLinkInStatusBar:
+  drift_status: No Drift
+  ks_statistic: 0.0007142857142857143
+  p_value: 1.0
+FrequentDomainNameMismatch:
+  drift_status: No Drift
+  ks_statistic: 0.011857142857142858
+  p_value: 0.9260477358633304
+HostnameLength:
+  drift_status: No Drift
+  ks_statistic: 0.011428571428571429
+  p_value: 0.9439242137893612
+HttpsInHostname:
+  drift_status: No Drift
+  ks_statistic: 0.0
+  p_value: 1.0
+IframeOrFrame:
+  drift_status: No Drift
+  ks_statistic: 0.003904761904761905
+  p_value: 1.0
+ImagesOnlyInForm:
+  drift_status: No Drift
+  ks_statistic: 0.002761904761904762
+  p_value: 1.0
+InsecureForms:
+  drift_status: No Drift
+  ks_statistic: 0.006666666666666667
+  p_value: 0.9999803883287461
+IpAddress:
+  drift_status: No Drift
+  ks_statistic: 0.003142857142857143
+  p_value: 1.0
+MissingTitle:
+  drift_status: No Drift
+  ks_statistic: 0.005047619047619047
+  p_value: 0.9999999980210574
+NoHttps:
+  drift_status: No Drift
+  ks_statistic: 0.0020952380952380953
+  p_value: 1.0
+NumAmpersand:
+  drift_status: No Drift
+  ks_statistic: 0.002619047619047619
+  p_value: 1.0
+NumDash:
+  drift_status: No Drift
+  ks_statistic: 0.016095238095238096
+  p_value: 0.6423782659120942
+NumDashInHostname:
+  drift_status: No Drift
+  ks_statistic: 0.005095238095238095
+  p_value: 0.9999999970418372
+NumDots:
+  drift_status: No Drift
+  ks_statistic: 0.013476190476190477
+  p_value: 0.8353942663792534
+NumHash:
+  drift_status: No Drift
+  ks_statistic: 0.0005238095238095238
+  p_value: 1.0
+NumNumericChars:
+  drift_status: No Drift
+  ks_statistic: 0.009142857142857144
+  p_value: 0.9941151038078684
+NumPercent:
+  drift_status: No Drift
+  ks_statistic: 0.003857142857142857
+  p_value: 1.0
+NumQueryComponents:
+  drift_status: No Drift
+  ks_statistic: 0.0024285714285714284
+  p_value: 1.0
+NumSensitiveWords:
+  drift_status: No Drift
+  ks_statistic: 0.008714285714285714
+  p_value: 0.9969078645529847
+NumUnderscore:
+  drift_status: No Drift
+  ks_statistic: 0.0064761904761904765
+  p_value: 0.9999905938999335
+PathLength:
+  drift_status: No Drift
+  ks_statistic: 0.012857142857142857
+  p_value: 0.8739588784319685
+PathLevel:
+  drift_status: No Drift
+  ks_statistic: 0.005190476190476191
+  p_value: 0.9999999936046379
+PctExtHyperlinks:
+  drift_status: No Drift
+  ks_statistic: 0.019857142857142858
+  p_value: 0.3745289301045387
+PctExtNullSelfRedirectHyperlinksRT:
+  drift_status: No Drift
+  ks_statistic: 0.0014761904761904762
+  p_value: 1.0
+PctExtResourceUrls:
+  drift_status: No Drift
+  ks_statistic: 0.025047619047619048
+  p_value: 0.14114373914031939
+PctExtResourceUrlsRT:
+  drift_status: No Drift
+  ks_statistic: 0.011285714285714286
+  p_value: 0.9492553501525068
+PctNullSelfRedirectHyperlinks:
+  drift_status: No Drift
+  ks_statistic: 0.01180952380952381
+  p_value: 0.9281720049706068
+PopUpWindow:
+  drift_status: No Drift
+  ks_statistic: 0.000619047619047619
+  p_value: 1.0
+QueryLength:
+  drift_status: No Drift
+  ks_statistic: 0.006666666666666667
+  p_value: 0.9999803883287461
+RandomString:
+  drift_status: No Drift
+  ks_statistic: 0.001238095238095238
+  p_value: 1.0
+RelativeFormAction:
+  drift_status: No Drift
+  ks_statistic: 0.0057619047619047615
+  p_value: 0.9999996997234195
+RightClickDisabled:
+  drift_status: No Drift
+  ks_statistic: 0.004285714285714286
+  p_value: 0.9999999999995396
+SubdomainLevel:
+  drift_status: No Drift
+  ks_statistic: 0.004523809523809524
+  p_value: 0.9999999999900622
+SubdomainLevelRT:
+  drift_status: No Drift
+  ks_statistic: 0.002285714285714286
+  p_value: 1.0
+SubmitInfoToEmail:
+  drift_status: No Drift
+  ks_statistic: 0.0016190476190476191
+  p_value: 1.0
+TildeSymbol:
+  drift_status: No Drift
+  ks_statistic: 0.0003333333333333333
+  p_value: 1.0
+UrlLength:
+  drift_status: No Drift
+  ks_statistic: 0.017761904761904763
+  p_value: 0.5161828007662737
+UrlLengthRT:
+  drift_status: No Drift
+  ks_statistic: 0.008047619047619048
+  p_value: 0.9990885603439429
+id:
+  drift_status: No Drift
+  ks_statistic: 0.013666666666666667
+  p_value: 0.82272661114935

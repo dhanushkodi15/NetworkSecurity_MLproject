@@ -1,4 +1,5 @@
 import os,sys
+import numpy as np
 
 
 ##data ingestion constants
@@ -29,4 +30,16 @@ DATA_VALIDATION_DRIFT_REPORT_FILE_NAME = "report.yaml"
 
 ## Schema file path
 SCHEMA_FILE_PATH = os.path.join("Data_Schema","schema.yaml")
+
+## Transformation constants
+DATA_TRANSFORMATION_DIR_NAME = "data_transformation"
+DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR = "transformed_data"
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR = "transformed_object"
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_FILE_NAME = "transformed_object.pkl"
+
+DATA_TRANSFORMATION_IMPUTER: dict = {
+    "missing_values": np.nan,
+    "n_neighbors": 3,
+    "weights": "uniform",
+}
 
