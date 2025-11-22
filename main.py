@@ -4,12 +4,14 @@ from NetworkSecurity.Entity.entity_config import (
     DataIngestionConfig, 
     TrainingPipelineConfig, 
     DataValidationConfig,
-    DataTransformationConfig
+    DataTransformationConfig,
+    ModelTrainerConfig
     )
 from NetworkSecurity.Components.data_ingestion import DataIngestion
 from NetworkSecurity.Exception.exception import NetworkSecurityException
 from NetworkSecurity.Components.data_validation import DataValidation
 from NetworkSecurity.Components.data_transformation import DataTransformation
+from NetworkSecurity.Components.model_trainer import ModelTrainer
 from NetworkSecurity.Logging.logger import logging
 def main():
     try:
@@ -27,6 +29,11 @@ def main():
                                                data_validation.data_validation_artifact)
         data_transformation_artifact=data_transformation.initiate_data_transformation()
         logging.info(f"Data transformation completed successfully. Artifact: {data_transformation_artifact}")
+        model_trainer_config=ModelTrainerConfig()
+        model_trainer=ModelTrainer(model_trainer_config,
+                                   data_transformation_artifact)
+        model_trainer_artifact=model_trainer.initiate_model_trainer()
+        logging.info(f"Model trainer completed successfully. Artifact: {model_trainer_artifact}")
 
         
     except Exception as e:

@@ -67,4 +67,12 @@ class DataTransformationConfig():
                                                         TrainingPipeline.DATA_TRANSFORMATION_TRANSFORMED_OBJECT_FILE_NAME)
         self.imputer_params = TrainingPipeline.DATA_TRANSFORMATION_IMPUTER
 
-                                                         
+class ModelTrainerConfig():
+    def __init__(self):
+        self.model_trainer_dir = os.path.join(TrainingPipeline.ARTIFACT_DIR,
+                                              TrainingPipeline.MODEL_TRAINER_DIR_NAME)
+        self.trained_model_file_path = os.path.join(self.model_trainer_dir,
+                                                    TrainingPipeline.MODEL_TRAINER_TRAINED_MODEL_DIR,
+                                                    TrainingPipeline.MODEL_TRAINER_TRAINED_MODEL_FILE_NAME)
+        self.base_accuracy = TrainingPipeline.MODEL_TRAINER_BASE_ACCURACY
+        self.expected_score_diff = TrainingPipeline.MODEL_TRAINER_EXPECTED_SCORE_DIFF

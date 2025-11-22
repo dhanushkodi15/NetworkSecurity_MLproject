@@ -43,3 +43,13 @@ DATA_TRANSFORMATION_IMPUTER: dict = {
     "weights": "uniform",
 }
 
+## Model Trainer constants
+MODEL_TRAINER_DIR_NAME = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR = "trained_model"
+MODEL_TRAINER_TRAINED_MODEL_FILE_NAME = "model.pkl"
+MODEL_TRAINER_BASE_ACCURACY = 0.6
+MODEL_TRAINER_EXPECTED_SCORE_DIFF = 0.05
+
+SAVED_MODELS_DIR = "saved_models"
+MODEL_FILE_NAME = "best_model.pkl"
+

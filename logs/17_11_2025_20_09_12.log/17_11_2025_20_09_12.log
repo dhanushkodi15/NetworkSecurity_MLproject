@@ -1,5 +1,0 @@
-[ 2025-11-17 20:09:16,815] 17 root INFO - ====================Data Ingestion log started.==================== 
-[ 2025-11-17 20:09:26,419] 28 root INFO - Data shape from database: (10000, 51)
-[ 2025-11-17 20:09:26,760] 36 root INFO - Feature store file created at: artifacts\data_ingestion\17_11_2025__20_09_16\feature_store\phisingdataset.csv
-[ 2025-11-17 20:09:27,108] 45 root INFO - Train and test files created at: artifacts\data_ingestion\17_11_2025__20_09_16\ingested\train.csv and artifacts\data_ingestion\17_11_2025__20_09_16\ingested\test.csv
-[ 2025-11-17 20:09:27,111] 22 root INFO - Data ingestion completed successfully. Train file: artifacts\data_ingestion\17_11_2025__20_09_16\ingested\train.csv, Test file: artifacts\data_ingestion\17_11_2025__20_09_16\ingested\test.csv
