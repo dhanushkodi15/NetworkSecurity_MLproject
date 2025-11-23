@@ -1,13 +1,15 @@
-python-dotenv
-pandas
-numpy
-matplotlib
-seaborn
-flask
-pymango
-certifi
-scikit-learn
-pymongo[srv]==3.12
-pyyaml
+# python-dotenv
+# pandas
+# numpy
+# matplotlib
+# seaborn
+# flask
+# pymango
+# certifi
+# scikit-learn
+# pymongo[srv]==3.12
+# pyyaml
+# mlflow
+dagshub
 
 # -e .

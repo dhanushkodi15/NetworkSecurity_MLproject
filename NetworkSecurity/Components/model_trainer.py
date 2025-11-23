@@ -1,4 +1,7 @@
 import os,sys
+import mlflow, dagshub
+
+dagshub.init(project="NetworkSecurity_Mlproject", tracking_uri="dagshub://dhanushkodi15/NetworkSecurity_Mlproject")
 
 from NetworkSecurity.Exception.exception import NetworkSecurityException
 from NetworkSecurity.Logging.logger import logging
@@ -21,11 +24,17 @@ class ModelTrainer:
             self.data_transformation_artifact = data_transformation_artifact
         except Exception as e:
             raise NetworkSecurityException(e,sys)
+        
+    def track_mlflow(self, model, metrics:dict, prefix:str):
+        with mlflow.start_run():
+            mlflow.sklearn.log_model(model, "model")
+            for metric_name, metric_value in metrics.__dict__.items():
+                mlflow.log_metric(f"{prefix}_{metric_name}", metric_value)
 
     def train_model(self,X_train,y_train, X_test,y_test):
         try:
             models={
-                "LogisticRegression":LogisticRegression(),
+                "LogisticRegression":LogisticRegression(max_iter=100),
                 "DecisionTree":DecisionTreeClassifier(),
                 "RandomForest":RandomForestClassifier(),
                 "GradientBoosting":GradientBoostingClassifier(),
@@ -38,17 +47,17 @@ class ModelTrainer:
                     # 'max_depth':[3,5,10,15],
                 },
                 "RandomForest":{
-                    'n_estimators':[50,100,200],
+                    #'n_estimators':[50,100,200],
                     # 'criterion':['gini','entropy'],
                     # 'max_depth':[3,5,10],
                 },
                 "GradientBoosting":{
-                    'learning_rate':[0.01,0.1,0.2],
+                    #'learning_rate':[0.01,0.1,0.2],
                     # 'n_estimators':[50,100,200],
                     # 'subsample':[0.6,0.8,1.0],
                 },
                 "AdaBoost":{
-                    'n_estimators':[50,100,200],
+                    #'n_estimators':[50,100,200],
                     # 'learning_rate':[0.01,0.1,0.2],
                 }
             }
@@ -62,14 +71,20 @@ class ModelTrainer:
                 list(model_report.values()).index(best_score)
             ]
             best_model = models[best_model_name]
+            best_model.fit(X_train,y_train)
             logging.info(f"Best model found , Model Name : {best_model_name} , R2 Score : {best_score}")
 
             y_train_pred = best_model.predict(X_train)
             classification_metric_train = calculate_classification_metrics(y_true=y_train, y_pred=y_train_pred)
 
+            ## Track in mlflow
+            self.track_mlflow(best_model, classification_metric_train, "Train")
+
             y_test_pred = best_model.predict(X_test)
             classification_metric_test = calculate_classification_metrics(y_true=y_test, y_pred=y_test_pred)
 
+            ## Track in mlflow
+            self.track_mlflow(best_model, classification_metric_test, "Test")
             preprocessor=load_object(file_path=self.data_transformation_artifact.transformed_object_file_path)
             model_estimator = NetworkModelEstimator(preprocessor=preprocessor, model=best_model)
 
